@@ -14,9 +14,10 @@ import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
 
 //Code to import ExpenseItem.js 
-import ExpenseItem from './components/ExpenseItem';
+//import ExpenseItem from './components/ExpenseItem';
 
-
+//import Currency.js
+import Currency from './components/Currency';
 
 
 
@@ -26,51 +27,38 @@ import AllocationForm from './components/AllocationForm';
 const App = () => {
     return (
         <AppProvider>
-            <div className='container'>
-                <h1 className='mt-3'>Company's Budget Allocation</h1>
-                    <div className='row mt-3'>
-                        {
-                                            // Budget component
-                            <div className='col-sm'>
-                                <Budget />
-                             </div>/* Add Budget component here */
-                        }        
-
-                        {
-                                             //Remaining component
-                            <div className='col-sm'>
-                                <Remaining />
-                            </div>/* Add Remaining component here*/
-                        }        
-
-                        {
-                                             //ExpenseTotal component
-                            <div className='col-sm'>
-                                <ExpenseTotal />
-                            </div> /* Add ExpenseTotal component here */
-                        }        
-                       
-                        {
-                            <div className='col-sm'>
-                                <ExpenseList />
-                            </div>    /* Add ExpenseList component here */
-                        }         
-
-                        {
-                             <div className='col-sm'>
-                                <ExpenseItem />
-                             </div>     /* Add ExpenseItem component here */
-                        }        
-
-                        {
-                             <div className='col-sm'>
-                                <AllocationForm />
-                             </div>     /* Add AllocationForm component here under */
-                        }        
-
-                </div>
+          <div className="container">
+            <h1 className="mt-3">Company's Budget Allocation</h1>
+            <div className="row mt-3">
+              <div className="col-sm">
+                <Budget />
+              </div>
+              <div className="col-sm">
+                <Remaining />
+              </div>
+              <div className="col-sm">
+                <ExpenseTotal />
+              </div>
+    
+                <div className="dropdown col-sm">
+                <Currency />
+              </div>
             </div>
+            <h3 className="mt-3">Allocation</h3>
+            <div className="row ">
+              <div className="col-sm">
+                <ExpenseList />
+              </div>
+            </div>
+            <h3 className="mt-3">Change allocation</h3>
+            <div className="row mt-3">
+              <div className="col-sm">
+                <AllocationForm />
+              </div>
+            </div>
+          </div>
         </AppProvider>
-    );
-};
-export default App;
+      );
+    };
+    
+    export default App;
