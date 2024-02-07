@@ -59,7 +59,7 @@ const AllocationForm = (props) => {
                 <option value="Reduce" name="Reduce">Reduce</option>
                   </select>
                     <div id="aloc" className = "d-flex align-center ms-4 align-items-center">
-                        <span id= "currencysign me-0 pe-0">Currency: {currency}</span> 
+                        <span id= "currencysign me-0 pe-0">Budget: {currency}</span> 
                         <input
                             required='required'
                             type='number'
